@@ -126,4 +126,50 @@
       growthObserver.observe(growthLine);
     }
   }
+
+  // ---------- Case-study evidence carousel ----------
+  document.querySelectorAll('.cs-evidence').forEach((wrap) => {
+    const frame = wrap.querySelector('.cs-evidence__frame');
+    const slides = Array.from(frame.querySelectorAll('.cs-evidence__slide'));
+    if (slides.length < 2) return;
+
+    const dotsEl = wrap.querySelector('.cs-evidence__dots');
+    const captionEl = wrap.querySelector('.cs-evidence__caption');
+    let active = slides.findIndex((s) => s.classList.contains('is-active'));
+    if (active < 0) active = 0;
+    let timer = null;
+
+    const dots = slides.map((slide, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'cs-evidence__dot';
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Show evidence ${i + 1} of ${slides.length}`);
+      dot.addEventListener('click', () => { show(i); restart(); });
+      dotsEl.appendChild(dot);
+      return dot;
+    });
+
+    function show(i) {
+      slides[active].classList.remove('is-active');
+      dots[active].classList.remove('is-active');
+      active = i;
+      slides[active].classList.add('is-active');
+      dots[active].classList.add('is-active');
+      if (captionEl && slides[active].dataset.caption) {
+        captionEl.textContent = slides[active].dataset.caption;
+      }
+    }
+
+    function restart() {
+      if (timer) clearInterval(timer);
+      if (prefersReducedMotion) return;
+      timer = setInterval(() => show((active + 1) % slides.length), 4500);
+    }
+
+    show(active);
+    restart();
+
+    wrap.addEventListener('mouseenter', () => { if (timer) clearInterval(timer); });
+    wrap.addEventListener('mouseleave', restart);
+  });
 })();
