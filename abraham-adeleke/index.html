@@ -9,7 +9,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080A09'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%231A9965' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -34,7 +34,7 @@
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn--primary btn--small" href="#contact">Work With Me</a>
+      <a class="btn btn--primary btn--small" href="#" data-booking-pending="true">Work With Me</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
@@ -50,34 +50,30 @@
     <li><a href="#how-i-work">How I Work</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="btn btn--primary" href="#contact">Work With Me</a>
+  <a class="btn btn--primary" href="#" data-booking-pending="true">Work With Me</a>
 </div>
 
 <main id="main">
 
   <!-- ============ HOME / HERO ============ -->
   <section class="hero" id="home">
-    <div class="hero__grid" aria-hidden="true"></div>
     <div class="container hero__inner">
 
       <div class="hero__copy reveal">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>Business Growth Strategist</p>
-        <h1 class="hero__headline">Businesses worth choosing deserve to be chosen.</h1>
-        <p class="hero__sub">I help founders build the brand, visibility and growth systems that turn attention into real business opportunities.</p>
+        <p class="eyebrow">Business Growth Strategist</p>
+        <h1 class="hero__headline">Good businesses don&rsquo;t fail. Invisible ones do.</h1>
+        <p class="hero__sub">I build the brand, visibility and growth systems that turn attention into paying customers, not vanity metrics.</p>
+        <p class="hero__capabilities">Brand Strategy &middot; Visibility Systems &middot; Customer Acquisition &middot; SEO &amp; GEO</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#contact">Work With Me</a>
+          <a class="btn btn--primary" href="#" data-booking-pending="true">Work With Me</a>
           <a class="btn btn--ghost" href="#results">See My Results</a>
         </div>
       </div>
 
       <div class="hero__visual reveal reveal--delay-1">
-        <span class="hero__ghost-text" aria-hidden="true">ADELEKE</span>
+        <div class="hero__glow" aria-hidden="true"></div>
         <div class="photo-frame photo-frame--hero" role="img" aria-label="Placeholder reserved for Abraham Adeleke's photograph">
-          <div class="photo-frame__grid" aria-hidden="true"></div>
-          <span class="photo-frame__corner photo-frame__corner--tl" aria-hidden="true"></span>
-          <span class="photo-frame__corner photo-frame__corner--br" aria-hidden="true"></span>
           <div class="photo-frame__content">
-            <span class="photo-frame__plus" aria-hidden="true">+</span>
             <span class="photo-frame__label">Abraham Photo</span>
             <span class="photo-frame__meta">4:5 &middot; replace with final photograph</span>
           </div>
@@ -115,7 +111,7 @@
   <!-- ============ PROBLEM ============ -->
   <section class="problem">
     <div class="container problem__inner">
-      <p class="eyebrow reveal"><span class="eyebrow__dot"></span>The Problem</p>
+      <p class="eyebrow reveal">The Problem</p>
       <h2 class="problem__headline reveal">Good businesses can still be difficult to discover, understand or choose.</h2>
       <div class="problem__body">
         <p class="reveal">Most businesses are not losing to better competitors. They are losing to competitors who are easier to find, understand and trust.</p>
@@ -128,7 +124,7 @@
   <section class="approach">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>The Approach</p>
+        <p class="eyebrow">The Approach</p>
         <h2>The Growth System</h2>
         <p class="section-head__desc">Growth is not a marketing tactic. It is a system that connects brand, visibility, trust and revenue.</p>
       </div>
@@ -148,7 +144,7 @@
   <section class="services">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>What I Build</p>
+        <p class="eyebrow">What I Build</p>
         <h2>Five disciplines. One connected system.</h2>
       </div>
 
@@ -188,11 +184,7 @@
 
       <div class="about__visual reveal">
         <div class="photo-frame photo-frame--about" role="img" aria-label="Placeholder reserved for Abraham Adeleke's about photograph">
-          <div class="photo-frame__grid" aria-hidden="true"></div>
-          <span class="photo-frame__corner photo-frame__corner--tl" aria-hidden="true"></span>
-          <span class="photo-frame__corner photo-frame__corner--br" aria-hidden="true"></span>
           <div class="photo-frame__content">
-            <span class="photo-frame__plus" aria-hidden="true">+</span>
             <span class="photo-frame__label">Abraham About Photo</span>
             <span class="photo-frame__meta">4:5 &middot; replace with final photograph</span>
           </div>
@@ -200,7 +192,7 @@
       </div>
 
       <div class="about__copy reveal reveal--delay-1">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>About</p>
+        <p class="eyebrow">About</p>
         <h2 class="about__headline">Strategy, built like software.</h2>
         <p>I am Abraham Adeleke, a business growth strategist. My work sits at the intersection of brand, marketing and growth systems: three things most businesses treat as separate problems, handled by separate people.</p>
         <p>I did not start in marketing. I started in software engineering, and it changed how I think about growth. Software rewards clear logic and systems that hold together under pressure. Marketing without that structure tends to produce noise: content without direction, campaigns without a thesis behind them.</p>
@@ -215,7 +207,7 @@
   <section class="results" id="results">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>Results</p>
+        <p class="eyebrow">Results</p>
         <h2>Results That Speak</h2>
         <p class="section-head__desc">Selected outcomes from businesses and brands I have worked with. Visual case studies are published as client work is finalised.</p>
       </div>
@@ -285,7 +277,7 @@
   <section class="testimonials">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>What Clients Say</p>
+        <p class="eyebrow">What Clients Say</p>
         <h2>Testimonials</h2>
       </div>
 
@@ -319,7 +311,7 @@
   <section class="how-i-work" id="how-i-work">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>Process</p>
+        <p class="eyebrow">Process</p>
         <h2>How We Work</h2>
       </div>
 
@@ -350,7 +342,7 @@
       <h2>If the business is good, let&rsquo;s make sure the right people can see it.</h2>
       <p>If you are building something worth choosing, let&rsquo;s talk about how to make it easier for the right customers to discover, understand and trust it.</p>
       <div class="final-cta__actions">
-        <a class="btn btn--primary" href="#contact">Work With Me</a>
+        <a class="btn btn--primary" href="#" data-booking-pending="true">Work With Me</a>
         <a class="btn btn--ghost" href="#contact">Start a Conversation</a>
       </div>
     </div>
@@ -360,7 +352,7 @@
   <section class="contact" id="contact">
     <div class="container contact__inner">
       <div class="reveal">
-        <p class="eyebrow"><span class="eyebrow__dot"></span>Contact</p>
+        <p class="eyebrow">Contact</p>
         <h2>Let&rsquo;s Talk</h2>
       </div>
 
