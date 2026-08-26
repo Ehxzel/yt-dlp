@@ -8,6 +8,11 @@ for a real `<img>` tag.
 
 - `abraham-hero.jpg` &middot; used in the Home section (hero), portrait crop, 4:5 ratio
 - `abraham-about.jpg` &middot; used in the About section, portrait crop, 4:5 ratio
+- `favicon.svg` &middot; the browser tab icon, already here as a placeholder
+  (the green "A" mark). Replace this file with your own logo/icon to swap
+  it, same filename, no code changes needed. Any square image works even
+  if it isn't an `.svg`, just tell Claude the new filename and it'll update
+  the `<link rel="icon">` tag to match.
 
 You can reuse the same photo for both if you only have one for now, just
 save it twice under both filenames.
